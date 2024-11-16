@@ -112,4 +112,3 @@ If you prefer not to use the provided installation script or encounter any issue
 
 SecureSync is licensed under the [MIT License](LICENSE).
 
-Special thanks to [@Madhur215](https://github.com/Madhur215/Django-ChatApp) for the groundwork and inspiration for this project.
