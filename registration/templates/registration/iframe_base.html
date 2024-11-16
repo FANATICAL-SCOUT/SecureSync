@@ -1,0 +1,14 @@
+{% extends "registration/Base.html" %}
+{% load static %}
+
+{% block content %}
+  <link rel="stylesheet" href="{% static 'css/registration/registration_home.css' %}" />
+  <title>SecureSync: A secure messaging Application</title>
+</head>
+
+<body>
+  <!--iframe whole page so that page can be reload without refresh-->
+  <iframe id="baseiframe" src="{% url 'registration:home' %}" frameborder="0"
+    style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></iframe>
+
+{% endblock %}

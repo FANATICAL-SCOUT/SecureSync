@@ -1,0 +1,51 @@
+{% extends "registration/Base.html" %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/registration/registration_home.css' %}" />
+
+<title>SecureSync: A secure messaging Application</title>
+</head>
+
+<body>
+  <span id="pageloader" class="pageloader"></span>
+
+  <div id="Maincontent" class="container">
+    <img class="logo" src="{% static '/images/logo/png/logo-no-background.png' %}" alt="Logo" />
+    <div class="buttons">
+      <button onclick="login();">Login</button>
+      <button onclick="register();">Signup</button>
+    </div>
+    <div class="buttons">
+      <button onclick="anonymousLogin();">Anonymous Direct Login</button>
+    </div>
+    <b>
+      <p class="fact-title">Do you know?</p>
+    </b>
+    <small class="fact">{{fact}}</small>
+    <div class="buttons">
+      <h5 class="credits" id="credits">An open source project, Initiated by
+
+        <a target="_blank" href="https://www.linkedin.com/in/aatheswaran-sanjayan-9279b726b/">AATHESWARAN.S</a> &
+        <a target="_blank" href="https://www.linkedin.com/in/nishok-aswin-64b862294/">NISHOK ASWIN</a>. Give a
+        ⭐️ on <a target="_blank" href="https://github.com/FANATICAL-SCOUT">Github</a>.
+      </h5>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="{% static 'js/registration/registration_home.js' %}"></script>
+  <script>
+    function login() {
+      window.location.href = "{% url 'registration:login' %}";
+    }
+    function register() {
+      window.location.href = "{% url 'registration:register' %}";
+    }
+
+    function anonymousLogin() {
+      window.location.href =
+        "{% url 'registration:anonymous_direct_login' %}";
+    }
+  </script>
+  {% endblock %}
